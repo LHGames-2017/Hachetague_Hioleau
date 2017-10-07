@@ -68,8 +68,41 @@
                     {
                         case SubCollectAction.CollectRessource:
                         {
-                            //code
-                            break;
+                            if(gameInfo.Player.CarriedResources >= gameInfo.Player.CarryingCapacity)
+                                    {
+                                        PlayerState = ActionTypes.MoveAction;
+                                        PlayerSubMoveState = SubMoveAction.ReturnToHouse;
+                                    }
+                                    else
+                                    {
+                                        Point ressourcePosition = new Point(0, 0);
+
+                                        if (carte[gameInfo.Player.Position.X + 1, gameInfo.Player.Position.Y].C == 'R')
+                                        {
+                                            ressourcePosition = new Point(gameInfo.Player.Position.X + 1, gameInfo.Player.Position.Y);
+                                        }
+                                        if (carte[gameInfo.Player.Position.X - 1 , gameInfo.Player.Position.Y].C == 'R')
+                                        {
+                                            ressourcePosition = new Point(gameInfo.Player.Position.X - 1, gameInfo.Player.Position.Y);
+                                        }
+                                        if (carte[gameInfo.Player.Position.X, gameInfo.Player.Position.Y + 1].C == 'R')
+                                        {
+                                            ressourcePosition = new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y + 1);
+                                        }
+                                        if (carte[gameInfo.Player.Position.X, gameInfo.Player.Position.Y - 1].C == 'R')
+                                        {
+                                            ressourcePosition = new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y - 1);
+                                        }
+                                        else
+                                        {
+                                            PlayerState = ActionTypes.DefaultAction;
+                                            PlayerSubMoveState = SubMoveAction.Default;
+                                        }
+
+
+                                        AIHelper.CreateCollectAction(ressourcePosition);
+                                    }
+                                    break;
                         }
                         case SubCollectAction.DropRessourceToHouse:
                         {
