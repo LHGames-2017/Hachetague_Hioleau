@@ -12542,11 +12542,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\David-alex\\Desktop\\CSharp-seed-master\\LHGames\\LHGames.csproj",
+      "projectUniqueName": "C:\\Users\\David-alex\\Desktop\\CSharp-seed-master-2\\Hachetague_Hioleau\\LHGames\\LHGames.csproj",
       "projectName": "LHGames",
-      "projectPath": "C:\\Users\\David-alex\\Desktop\\CSharp-seed-master\\LHGames\\LHGames.csproj",
+      "projectPath": "C:\\Users\\David-alex\\Desktop\\CSharp-seed-master-2\\Hachetague_Hioleau\\LHGames\\LHGames.csproj",
       "packagesPath": "C:\\Users\\David-alex\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\David-alex\\Desktop\\CSharp-seed-master\\LHGames\\obj\\",
+      "outputPath": "C:\\Users\\David-alex\\Desktop\\CSharp-seed-master-2\\Hachetague_Hioleau\\LHGames\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
