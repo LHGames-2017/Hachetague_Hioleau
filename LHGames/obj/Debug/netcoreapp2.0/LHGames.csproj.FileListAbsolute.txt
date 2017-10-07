@@ -1,0 +1,11 @@
+C:\Users\Antoine\Source\Repos\Hachetague_Hioleau2\LHGames\bin\Debug\netcoreapp2.0\LHGames.deps.json
+C:\Users\Antoine\Source\Repos\Hachetague_Hioleau2\LHGames\bin\Debug\netcoreapp2.0\LHGames.runtimeconfig.json
+C:\Users\Antoine\Source\Repos\Hachetague_Hioleau2\LHGames\bin\Debug\netcoreapp2.0\LHGames.runtimeconfig.dev.json
+C:\Users\Antoine\Source\Repos\Hachetague_Hioleau2\LHGames\bin\Debug\netcoreapp2.0\LHGames.dll
+C:\Users\Antoine\Source\Repos\Hachetague_Hioleau2\LHGames\bin\Debug\netcoreapp2.0\LHGames.pdb
+C:\Users\Antoine\Source\Repos\Hachetague_Hioleau2\LHGames\obj\Debug\netcoreapp2.0\LHGames.csprojResolveAssemblyReference.cache
+C:\Users\Antoine\Source\Repos\Hachetague_Hioleau2\LHGames\obj\Debug\netcoreapp2.0\LHGames.csproj.CoreCompileInputs.cache
+C:\Users\Antoine\Source\Repos\Hachetague_Hioleau2\LHGames\obj\Debug\netcoreapp2.0\LHGames.AssemblyInfoInputs.cache
+C:\Users\Antoine\Source\Repos\Hachetague_Hioleau2\LHGames\obj\Debug\netcoreapp2.0\LHGames.AssemblyInfo.cs
+C:\Users\Antoine\Source\Repos\Hachetague_Hioleau2\LHGames\obj\Debug\netcoreapp2.0\LHGames.dll
+C:\Users\Antoine\Source\Repos\Hachetague_Hioleau2\LHGames\obj\Debug\netcoreapp2.0\LHGames.pdb
