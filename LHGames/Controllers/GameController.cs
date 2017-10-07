@@ -84,14 +84,78 @@
                                         }
                                         if (positionToMove.X > gameInfo.Player.Position.X + 1)
                                         {
-                                            action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X + 1, gameInfo.Player.Position.Y));
+                                            if (carte[(int)Math.Floor((gameInfo.Player.Position.X + 1)/2f), (int)Math.Floor(gameInfo.Player.Position.Y/2f)].C == (byte)TileType.L)
+                                            {
+                                                if (positionToMove.Y > gameInfo.Player.Position.Y + 1)
+                                                {
+                                                    if (carte[gameInfo.Player.Position.X, gameInfo.Player.Position.Y + 1].C == (byte)TileType.L)
+                                                    {
+                                                        action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y - 1));
+                                                        break;
+                                                    }
+                                                    else
+                                                    {
+                                                        action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y + 1));
+                                                        break;
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    if (carte[gameInfo.Player.Position.X, gameInfo.Player.Position.Y - 1].C == (byte)TileType.L)
+                                                    {
+                                                        action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y + 1));
+                                                        break;
+                                                    }
+                                                    else
+                                                    {
+                                                        action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y - 1));
+                                                        break;
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X + 1, gameInfo.Player.Position.Y));
+                                            }
                                             break;
                                         }
                                         else
                                         {
                                             if (positionToMove.X < gameInfo.Player.Position.X - 1)
                                             {
-                                                action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X - 1, gameInfo.Player.Position.Y));
+                                                if (carte[8, 9].C == (byte)TileType.L)
+                                                {
+                                                    if (positionToMove.Y > gameInfo.Player.Position.Y + 1)
+                                                    {
+                                                        if (carte[9, 10].C == (byte)TileType.L)
+                                                        {
+                                                            action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y - 1));
+                                                            break;
+                                                        }
+                                                        else
+                                                        {
+                                                            action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y + 1));
+                                                            break;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        if (carte[9, 8].C == (byte)TileType.L)
+                                                        {
+                                                            action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y + 1));
+                                                            break;
+                                                        }
+                                                        else
+                                                        {
+                                                            action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y - 1));
+                                                            break;
+                                                        }
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X - 1, gameInfo.Player.Position.Y));
+                                                }
                                                 break;
                                             }
                                             else
@@ -101,8 +165,6 @@
                                                     //test
                                                     action = AIHelper.CreateCollectAction(positionToMove);
                                                     break;
-                                                    //PlayerState = ActionTypes.CollectAction;
-                                                    //PlayerSubCollectState = SubCollectAction.CollectRessource;
                                                 }
                                                 else
                                                 {
@@ -131,14 +193,45 @@
                                                     {
                                                         if (positionToMove.Y > gameInfo.Player.Position.Y)
                                                         {
-                                                            action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y + 1));
-                                                            break;
+                                                            if (carte[9,10].C == (byte)TileType.L)
+                                                            {
+                                                                if (carte[10, 9].C == (byte)TileType.L)
+                                                                {
+                                                                    action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X - 1, gameInfo.Player.Position.Y));
+                                                                    break;
+                                                                }
+                                                                else
+                                                                {
+                                                                    action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X + 1, gameInfo.Player.Position.Y));
+                                                                    break;
+                                                                }
+                                                            }
+                                                            else
+                                                            {
+                                                                action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y + 1));
+                                                                break;
+                                                            }
                                                         }
                                                         else
                                                         {
-
-                                                            action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y - 1));
-                                                            break;
+                                                            if (carte[9, 8].C == (byte)TileType.L)
+                                                            {
+                                                                if (carte[10, 9].C == (byte)TileType.L)
+                                                                {
+                                                                    action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X - 1, gameInfo.Player.Position.Y));
+                                                                    break;
+                                                                }
+                                                                else
+                                                                {
+                                                                    action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X + 1, gameInfo.Player.Position.Y));
+                                                                    break;
+                                                                }
+                                                            }
+                                                            else
+                                                            {
+                                                                action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y - 1));
+                                                                break;
+                                                            }
                                                         }
                                                     }
 
