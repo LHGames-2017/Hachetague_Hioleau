@@ -14,7 +14,7 @@ namespace StarterProject.Web.Api
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
-                .UseUrls("http://*:3000")
+                .UseUrls("http://*:8080")
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
