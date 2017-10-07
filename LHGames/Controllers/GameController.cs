@@ -71,6 +71,7 @@
                         case SubCollectAction.DropRessourceToHouse:
                         {
                             //code
+                            PlayerSubMoveState = SubMoveAction.Default;
                             break;
                         }
                         case SubCollectAction.Default:
