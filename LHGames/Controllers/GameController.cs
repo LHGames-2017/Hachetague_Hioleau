@@ -65,7 +65,7 @@
                     {
                         case SubCollectAction.CollectRessource:
                         {
-                                    if (gameInfo.Player.CarriedResources >= gameInfo.Player.CarryingCapacity)
+                            if(gameInfo.Player.CarriedResources >= gameInfo.Player.CarryingCapacity)
                                     {
                                         PlayerState = ActionTypes.MoveAction;
                                         PlayerSubMoveState = SubMoveAction.ReturnToHouse;
@@ -78,7 +78,7 @@
                                         {
                                             ressourcePosition = new Point(gameInfo.Player.Position.X + 1, gameInfo.Player.Position.Y);
                                         }
-                                        if (carte[gameInfo.Player.Position.X - 1, gameInfo.Player.Position.Y].C == 'R')
+                                        if (carte[gameInfo.Player.Position.X - 1 , gameInfo.Player.Position.Y].C == 'R')
                                         {
                                             ressourcePosition = new Point(gameInfo.Player.Position.X - 1, gameInfo.Player.Position.Y);
                                         }
@@ -104,6 +104,7 @@
                         case SubCollectAction.DropRessourceToHouse:
                         {
                             //code
+                            PlayerSubMoveState = SubMoveAction.Default;
                             break;
                         }
                         case SubCollectAction.Default:
