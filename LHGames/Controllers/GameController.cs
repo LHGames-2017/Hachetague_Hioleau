@@ -84,11 +84,11 @@
                                         }
                                         if (positionToMove.X > gameInfo.Player.Position.X + 1)
                                         {
-                                            if (carte[10, 9].C == (byte)TileType.L)
+                                            if (carte[10, 9].C == (byte)TileType.L || carte[10, 9].C == (byte)TileType.W)
                                             {
                                                 if (positionToMove.Y > gameInfo.Player.Position.Y + 1)
                                                 {
-                                                    if (carte[gameInfo.Player.Position.X, gameInfo.Player.Position.Y + 1].C == (byte)TileType.L)
+                                                    if (carte[9, 10].C == (byte)TileType.L || carte[9, 10].C == (byte)TileType.W)
                                                     {
                                                         action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y - 1));
                                                         break;
@@ -101,7 +101,7 @@
                                                 }
                                                 else
                                                 {
-                                                    if (carte[9, 8].C == (byte)TileType.L)
+                                                    if (carte[9, 8].C == (byte)TileType.L || carte[9, 8].C == (byte)TileType.W)
                                                     {
                                                         action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y + 1));
                                                         break;
@@ -123,11 +123,11 @@
                                         {
                                             if (positionToMove.X < gameInfo.Player.Position.X - 1)
                                             {
-                                                if (carte[8, 9].C == (byte)TileType.L)
+                                                if (carte[8, 9].C == (byte)TileType.L || carte[8, 9].C == (byte)TileType.W)
                                                 {
                                                     if (positionToMove.Y > gameInfo.Player.Position.Y + 1)
                                                     {
-                                                        if (carte[9, 10].C == (byte)TileType.L)
+                                                        if (carte[9, 10].C == (byte)TileType.L || carte[9, 10].C == (byte)TileType.W)
                                                         {
                                                             action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y - 1));
                                                             break;
@@ -140,7 +140,7 @@
                                                     }
                                                     else
                                                     {
-                                                        if (carte[9, 8].C == (byte)TileType.L)
+                                                        if (carte[9, 8].C == (byte)TileType.L || carte[9, 8].C == (byte)TileType.W)
                                                         {
                                                             action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y + 1));
                                                             break;
@@ -193,9 +193,9 @@
                                                     {
                                                         if (positionToMove.Y > gameInfo.Player.Position.Y)
                                                         {
-                                                            if (carte[9,10].C == (byte)TileType.L)
+                                                            if (carte[9,10].C == (byte)TileType.L || carte[9, 10].C == (byte)TileType.W)
                                                             {
-                                                                if (carte[10, 9].C == (byte)TileType.L)
+                                                                if (carte[10, 9].C == (byte)TileType.L || carte[10, 9].C == (byte)TileType.W)
                                                                 {
                                                                     action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X - 1, gameInfo.Player.Position.Y));
                                                                     break;
@@ -214,9 +214,9 @@
                                                         }
                                                         else
                                                         {
-                                                            if (carte[9, 8].C == (byte)TileType.L)
+                                                            if (carte[9, 8].C == (byte)TileType.L || carte[9, 8].C == (byte)TileType.W)
                                                             {
-                                                                if (carte[10, 9].C == (byte)TileType.L)
+                                                                if (carte[10, 9].C == (byte)TileType.L || carte[10, 9].C == (byte)TileType.W)
                                                                 {
                                                                     action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X - 1, gameInfo.Player.Position.Y));
                                                                     break;
