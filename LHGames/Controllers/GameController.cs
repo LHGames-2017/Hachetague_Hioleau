@@ -58,6 +58,7 @@
                             case SubMoveAction.MoveToRessource:
                                 {
                                     action = AIHelper.CreateMoveAction(new Point(gameInfo.Player.Position.X + 1, gameInfo.Player.Position.Y));
+                                    break;
                                     if (gameInfo.Player.CarriedResources >= gameInfo.Player.CarryingCapacity)
                                     {
                                         PlayerSubMoveState = SubMoveAction.ReturnToHouse;
